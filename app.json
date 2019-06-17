@@ -1,0 +1,50 @@
+{
+  "expo": {
+    "name": "expokitSentry",
+    "slug": "expokitSentry",
+    "privacy": "public",
+    "sdkVersion": "33.0.0",
+    "platforms": ["ios", "android", "web"],
+    "version": "1.0.1",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.charliecruzan.expokitsentry",
+      "publishBundlePath": "ios/expokitsentry/Supporting/shell-app.bundle",
+      "publishManifestPath": "ios/expokitsentry/Supporting/shell-app-manifest.json"
+    },
+    "android": {
+      "package": "com.charliecruzan.expokitsentry",
+      "publishBundlePath": "android/app/src/main/assets/shell-app.bundle",
+      "publishManifestPath": "android/app/src/main/assets/shell-app-manifest.json"
+    },
+    "hooks": {
+      "postPublish": [
+        {
+          "file": "sentry-expo/upload-sourcemaps",
+          "config": {
+            "organization": "charlie cruzan",
+            "project": "expokit-sentry-test",
+            "authToken": "<AUTH-TOKEN-HERE>"
+          }
+        }
+      ]
+    },
+    "isDetached": true,
+    "detach": {
+      "iosExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/ios-v2.11.0-sdk33.0.0-4b05019b-b5d6-454b-8350-09c2187b9f91.tar.gz",
+      "androidExpoViewUrl": "https://s3.amazonaws.com/exp-exponent-view-code/android-v2.11.2-sdk33.0.0-2aab95f5-0c82-4f4b-a3a0-828a07eb906f.tar.gz"
+    },
+    "scheme": "expef7af80df15a4054b12a64656cc76c76"
+  }
+}
